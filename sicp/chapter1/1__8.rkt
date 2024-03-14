@@ -12,8 +12,7 @@
     (/(+ (* 2 x) y) 3))
 
 (define (good-enough? guess x )
-    (< (abs (- (sqr guess) x)) 
-     (* 0.0000001 guess)))
+    (= guess (improve guess x)))
 
 (define (sqrt-iter guess x)
     (if (good-enough? guess x)
